@@ -1,0 +1,45 @@
+﻿@model Search 
+
+<form method="post" asp-action="DeletePOST">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Delete </h2>
+        </div>
+        <div asp-validation-summary="All"></div>
+         <input type="hidden" asp-for="VideoLength"  /> 
+        <div class="mb-3">
+            <label asp-for="Categories"> </label>
+            <input asp-for="Categories" disabled class="form-control" /> 
+        
+        </div>
+        
+        <div class="mb-3">
+            <label asp-for="Sub_Category"> </label>
+            <input asp-for="Sub_Category" disabled class="form-control" />
+       
+        </div>
+        <div class="mb-3">
+            <label asp-for="Instructor"> </label>
+            <input asp-for="Instructor" disabled class="form-control" />
+        
+        </div>
+        <div class="mb-3">
+            <label asp-for="Class_Level"> </label>
+            <input asp-for="Class_Level" disabled class="form-control" />
+   
+        </div>
+        <button  type="submit" class="btn btn-primary" style="width:150px">Delete</button>
+
+        <a asp-controller="Search" asp-action="Index" class="btn btn-secondary" style="width:150px">
+            Back to Section
+
+        </a>
+    </div>
+</form>
+
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial.cshtml" />
+
+    }
+}
